@@ -9,7 +9,7 @@ const app = express();
 // Import routes
 const customerRoutes = require('./routes/customer');
 
-// Settings
+// Settings 
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -17,6 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Middlewares
 app.use(morgan('dev'));
 
+// Localhost
 app.use(myconnection(mysql, {
     host: 'Localhost',
     user: 'root',
